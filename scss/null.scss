@@ -1,0 +1,100 @@
+// html {
+// 	scroll-behavior: smooth;
+// }
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+img {
+	max-width: 100%;
+	display: block;
+}
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+}
+:focus,
+:active {
+	outline: none;
+}
+a,
+a:focus,
+a:active,
+a:visited,
+a:hover {
+	outline: none;
+	text-decoration: none;
+	color: inherit;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+input::-ms-clear {
+	display: none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+
+body {
+	min-width: 375px;
+	min-height: 100vh;
+	color: #62626B;
+	font-size: 16px;
+	font-family: $fontfamily, sans-serif;
+}
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+.page {
+	flex: 1 1 auto;
+}
+.container {
+	max-width: $contWidth + 20px;
+	padding: 0 10px;
+	margin: 0 auto;
+   position: relative;
+}

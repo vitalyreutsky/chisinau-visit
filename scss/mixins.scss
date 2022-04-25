@@ -1,0 +1,48 @@
+//<CONNECTING FONTS>============================================================================
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: '$font_name';
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff2") format("woff2"), 
+			 url("../fonts/#{$file_name}.woff") format("woff");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+//</CONNECTING FONTS>===========================================================================
+
+//<RHOMBUS>=====================================================================================
+@mixin rhombus($size) {
+	transform: rotate(45deg);
+	height: calc(#{$size + px} * 70.72 / 100);
+	width: calc(#{$size + px} * 70.72 / 100);
+}
+//</RHOMBUS>====================================================================================
+
+//<DYNAMIC PROPERTYS>===========================================================================
+@mixin sh($property, $minValue, $maxValue, $mediaWidth: $pageWidth) {
+	$addSize: $maxValue - $minValue;
+	@if $mediaWidth==$pageWidth {
+		#{$property}: $maxValue + px;
+		@media (max-width:$mediaWidth+px) {
+			#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$mediaWidth - 320}));
+		}
+	}
+	@else {
+		#{$property}: calc(#{$minValue + px} + #{$addSize} * ((100vw - 320px) / #{$mediaWidth - 320}));
+	}
+}
+//==============================================================================================
+@mixin gr($property, $minValue, $maxValue, $mediaWidth: $pageWidth, $minWidth: 320) {
+	$addSize: $maxValue - $minValue;
+	@if $mediaWidth==$pageWidth {
+		#{$property}: $minValue + px;
+		@media (max-width:$mediaWidth+px) {
+			#{$property}: calc(#{$maxValue + px} - #{$addSize} * ((100vw - #{$minWidth + px}) / #{$mediaWidth - $minWidth}));
+		}
+	}
+	@else {
+		#{$property}: calc(#{$maxValue + px} - #{$addSize} * ((100vw - 320px) / #{$mediaWidth - 320}));
+	}
+}
+//==============================================================================================
