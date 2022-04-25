@@ -1,0 +1,178 @@
+//==============================================================================================\
+
+.bottom-line {
+  border-bottom: 2px dotted #bac1c5;
+   padding: 100px 0px;
+}
+
+.section {
+  & + .section {
+  }
+  // .section__wrapper
+//  &__wrapper {
+//    max-width: 1184px + 20px;
+//    display: flex;
+//    align-items: center;
+//    justify-content: flex-end;
+//    margin: 0 auto;
+//    border-bottom: 2px dotted #bac1c5;
+//    padding: 96px 10px;
+    @media (max-width: $md2+px) {
+      display: block;
+      width: 100%;
+      max-width: unset;
+      min-height: 0;
+      margin: 0;
+      //padding: 150px 0;
+    }
+    @media (max-width: $md3+px) {
+      //padding: 150px 0;
+    }
+    @media (max-width: 600px) {
+      //padding: 56px 0;
+    }
+  }
+// .section-container {}
+//==============================================================================================
+.navigation {
+  transition: all 0.5s;
+  position: fixed;
+  z-index: 10;
+  top: 650px;
+  display: flex;
+  flex-direction: column;
+  &.hiden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.top {
+    top: 350px;
+  }
+  // .navigation__item
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 17px;
+    position: relative;
+    animation: all 0.3s;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  // .navigation__number
+  &__number {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 8px;
+    letter-spacing: 1px;
+    color: #bac1c5;
+    margin-right: 8px;
+  }
+  // .navigation__icon
+  &__icon {
+    margin-right: 8px;
+  }
+  // .navigation__name
+  &__name {
+    font-family: $play;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+  }
+  // .navigation__line
+  &__line {
+    position: absolute;
+    width: 1px;
+    height: 27px;
+    left: 26px;
+    bottom: -19px;
+  }
+  .navigation__item {
+    &.active {
+      .navigation__number {
+        color: #62626b;
+      }
+      .navigation__name {
+        color: #000;
+      }
+      .navigation__icon {
+        svg {
+          fill: #f7cc00;
+        }
+      }
+      .navigation__line {
+        svg {
+          fill: #f7cc00;
+          path {
+            stroke-dasharray: unset;
+          }
+        }
+      }
+    }
+  }
+}
+//==============================================================================================
+.main-block {
+  position: relative;
+  max-width: 330px + 32px + 24px;
+  padding-left: 56px;
+  // .main-block__decor
+  &__decor {
+    position: absolute;
+    left: 0;
+    top: 50px;
+  }
+  // .main-block__subtitle
+  &__subtitle {
+    font-family: $play;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 8px;
+  }
+  // .main-block__title
+  &__title {
+    font-family: $play;
+    font-size: 34px;
+    line-height: 40px;
+    letter-spacing: 0.25px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 32px;
+  }
+  // .main-block__text
+  &__text {
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    margin-bottom: 32px;
+  }
+  // .main-block__square
+  &__square {
+    margin-bottom: 32px;
+  }
+  & :last-child {
+    margin-bottom: 0;
+  }
+}
+.link {
+  display: flex;
+  align-items: center;
+  // .link__icon
+  &__icon {
+    margin-right: 16px;
+  }
+  // .link__text
+  &__text {
+    font-family: $play;
+    font-style: italic;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: #252529;
+    text-decoration: underline;
+    padding-bottom: 4px;
+  }
+}
+//==============================================================================================
+//==============================================================================================

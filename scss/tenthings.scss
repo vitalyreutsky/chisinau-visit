@@ -1,0 +1,93 @@
+.hero {
+	background-image: url("../images/hero-bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 700px
+}
+
+.hero > .container {
+	position: relative;
+	height: 100%
+}
+
+.hero__wrap {
+	position: relative
+}
+
+.hero__info {
+	max-width: 685px;
+	margin: auto;
+	text-align: center;
+	padding-top: 410px
+}
+
+.hero__info h2 {
+	color: #ffffff;
+	font-family: $play;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 60px;
+	line-height: 72px
+}
+
+.hero__info p {
+	margin-top: 15px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.65px;
+	color: #FFFFFF;
+	mix-blend-mode: normal;
+	opacity: 0.8;
+}
+
+.showmore__arrow {
+	position: absolute;
+	z-index: 5;
+	width: 68px;
+	height: 68px;
+	left: 50%;
+	-webkit-transform: translateX(-50%) rotate(45deg);
+	-ms-transform: translateX(-50%) rotate(45deg);
+	transform: translateX(-50%) rotate(45deg);
+	bottom: -34px;
+	background: #F7CC00;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	cursor: pointer
+}
+
+.showmore__arrow img {
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg)
+}
+
+@media screen and (max-width: 950px) {
+	.hero {
+		height: 550px
+	}
+
+	.hero__info {
+		padding-top: 260px
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.hero__info {
+		padding-top: 200px
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.hero__info {
+		padding-top: 70px
+	}
+}
